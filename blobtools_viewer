@@ -1,0 +1,7 @@
+#Code for running BlobTools Viewer locally using Docker Desktop
+
+docker run -d --rm --name btk \
+           -v /path/to/datasets:/blobtoolkit/datasets \
+           -p 8000:8000 -p 8080:8080 \
+           -e VIEWER=true \
+           genomehubs/blobtoolkit:latest
