@@ -169,7 +169,7 @@ PCA <- function(cov_matrix, ind_label, pop_label, x_axis, y_axis, show.point=T, 
   assign("pca_table", e, .GlobalEnv)
 
   PCA_plot<-ggplot(data=e[,],aes(x=e[,x_axis+2], y=e[,y_axis+2], color=population,label=population, shape=population)) +
-    geom_enterotype(alpha=alpha, show.point=show.point, show.label=show.label, show.ellipse=show.ellipse, show.line=show.line) +
+    geom_enterotype(alpha=alpha, show.point=show.point, show.label=F, show.ellipse=show.ellipse, show.line=show.line, size=2.5) +
     scale_shape_manual(values = c(rep(c(15,16,17,18),7), 15, 16)) +
     theme_half_open() +
     theme(
