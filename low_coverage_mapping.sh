@@ -61,13 +61,19 @@ conda activate bowtie2
 
         fi
 
-
-        ## Convert to bam file for storage
-        $SAMTOOLS ./samtools view -bS -F 4 -@ $THREADS $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'.sam' > $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'.bam'
+                ## Convert to bam file for storage
+        $SAMTOOLS view -b -@ $THREADS $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'.sam' > $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'.bam'
         rm $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'.sam'
 
         ## Filter the mapped reads
         # Filter bam files to remove poorly mapped reads (non-unique mappings and mappings with a quality score < 20) -- do we want the quality score filter??
-        $SAMTOOLS ./samtools view -h -q $MINQ $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'.bam' | samtools view -@ $THREADS -buS - | samtools sort -@ $THREADS -o $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'_minq'$MINQ'_sorted.bam'
+        $SAMTOOLS sort -@ $THREADS $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'.bam' -o $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'_minq'$MINQ'_sorted.bam'
 
+        $SAMTOOLS index -M -b -@ $THREADS $SAMPLEBAM'_'$DATATYPE'_bt2_'$REFNAME'_minq'$MINQ'_sorted.bam'
+
+done
+
+
+
+        
 done
