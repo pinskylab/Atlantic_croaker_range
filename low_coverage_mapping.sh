@@ -73,7 +73,3 @@ conda activate bowtie2
 
 done
 
-
-
-        
-done
