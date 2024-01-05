@@ -17,3 +17,4 @@ p <- as.data.frame(p)
 p_sig <- subset(p, V1 < 0.05) #subsets to a data frame where SNPs with p <0.05 remain
 
 #1,491 SNPs have p-values < 0.05, so ~6.6% of SNPs show evidence of selection (1,491/22,600)
+

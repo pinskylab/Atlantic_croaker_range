@@ -88,8 +88,9 @@ names(admix.id.4) = c("pop","q1","q2", "q3", "q4")
 plot_4 = barplot(t(as.matrix(subset(admix.id.4, select=q1:q4))), col=1:4, border=NA)
 
 
-##PCAngsd Admixture Resulsts##
+##PCAngsd Admixture Results##
 
+#Plot K=2
 
 library(reticulate)
 np <- import("numpy")
@@ -104,4 +105,51 @@ names(pcadmix.id) = c("pop","q1","q2")
 
 plot_pcadmix = barplot(t(as.matrix(subset(pcadmix.id, select=q1:q2))), names=pcadmix.id$pop, col=c("orange", "blue"), border=NA)
 
+## Order individuals from North to South by latitude
 
+lat_lon <- read.csv("pop_labels_lat_lon.csv", header=FALSE)
+lat <- as.vector(lat_lon$V3)
+
+lat_lon_order <- lat_lon[order(lat_lon$V3, decreasing=TRUE),]
+
+pcadmix.id$lat <- lat_lon$V3 #add lat to admixture values dataframe
+
+pcadmix.id.order <- pcadmix.id[order(pcadmix.id$lat, decreasing=TRUE),] #orders individuals by latitude (N to S)
+
+plot_pcadmix_order = barplot(t(as.matrix(subset(pcadmix.id.order, select=q1:q2))), names=pcadmix.id.order$pop, col=c("orange", "blue"), border=NA)
+
+#Plot K=3
+
+k3_pcangsd <- np$load("pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0_2.admix.Q.npy")
+k3_pcadmix.id <- as.data.frame(cbind(pop_label, k3_pcangsd))
+names(k3_pcadmix.id) = c("pop","q1","q2", "q3")
+
+k3_pcadmix.id$lat <- lat_lon$V3 #add lat to admixture values dataframe
+
+k3_pcadmix.id.order <- k3_pcadmix.id[order(k3_pcadmix.id$lat, decreasing=TRUE),]
+
+plot_k3_pcadmix = barplot(t(as.matrix(subset(k3_pcadmix.id.order, select=q1:q3))), names=k3_pcadmix.id.order$pop, col=c(1:3), border=NA)
+
+#Plot K=4
+
+k4_pcangsd <- np$load("pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0_3.admix.Q.npy")
+k4_pcadmix.id <- as.data.frame(cbind(pop_label, k4_pcangsd))
+names(k4_pcadmix.id) = c("pop","q1","q2", "q3", "q4")
+
+k4_pcadmix.id$lat <- lat_lon$V3 #add lat to admixture values dataframe
+
+k4_pcadmix.id.order <- k4_pcadmix.id[order(k4_pcadmix.id$lat, decreasing=TRUE),]
+
+plot_k4_pcadmix = barplot(t(as.matrix(subset(k4_pcadmix.id.order, select=q1:q4))), names=k4_pcadmix.id.order$pop, col=c(1:4), border=NA)
+
+#Plot K=5
+
+k5_pcangsd <- np$load("pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0_4.admix.Q.npy")
+k5_pcadmix.id <- as.data.frame(cbind(pop_label, k5_pcangsd))
+names(k5_pcadmix.id) = c("pop","q1","q2", "q3", "q4", "q5")
+
+k5_pcadmix.id$lat <- lat_lon$V3 #add lat to admixture values dataframe
+
+k5_pcadmix.id.order <- k5_pcadmix.id[order(k5_pcadmix.id$lat, decreasing=TRUE),]
+
+plot_k5_pcadmix = barplot(t(as.matrix(subset(k5_pcadmix.id.order, select=q1:q5))), names=k5_pcadmix.id.order$pop, col=c(1:5), border=NA)
