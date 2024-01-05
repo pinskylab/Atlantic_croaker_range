@@ -11,4 +11,4 @@
 cd /scratch/ksf63
 source ~/.bashrc
 conda activate flye
-flye --pacbio-hifi m64190e_230310_212131.hifi_reads.fastq.gz --out-dir flye_out --threads 32
+flye --pacbio-hifi m64190e_230310_212131.hifi_reads.fastq.gz --out-dir flye_noalt_out --threads 32 --no-alt-contigs
