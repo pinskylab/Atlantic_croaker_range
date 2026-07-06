@@ -104,5 +104,33 @@ The resulting merged, overlap clipped, and realigned bam files are used as the i
 
 ## Downstream analysis using ANGSD
 
+ANGSD v. 0.940  
+PCAngsd v. 0.98.2  
+
+### SNP Calling with ANGSD
+
+sbatch angsd_global_snp_calling.sh  
+Generates list of SNPs to be used for subsequent analyses.
+
+### Genotype-likelihood estimation 
+
+sbatch get_beagle.sh  
+Generates Beagle file: bam_list_realigned_mindp132_maxdp4000_minind0.beagle.gz
+
+### PCAngsd: PCA, Admixture, Selection Scans
+
+Outputs from PCAngsd are used in the Statistical Analysis in R section  
+
+sbatch run_pcangsd.sh  
+Ouputs covariance matrix: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.cov  
+
+Selection Scan  
+run_pcangsd_selection.sh  
+Outputs npy file: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.selection.npy  
+
+Admixture with PCAngsd  
+sbatch run_pcangsd_admix.sh  
+Selects K=2 based on MAP analysis  
+Outputs: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0_e.admix.Q.npy, pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0_e.cov  
 
 
