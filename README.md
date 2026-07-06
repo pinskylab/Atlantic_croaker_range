@@ -82,5 +82,27 @@ Outputs .bt2, .dict, and .fai files
 
 ### Mapping with Bowtie2
 
+Sample_List_Combined.tsv and Sample_Table_Combined.tsv  
+sbatch low_coverage_mapping.sh  
+
+Running samtools conversion to bam file  
+sbatch samtools_mapping.sh
+
+### Merging bam files
+bam_list_merged.tsv  
+sbatch merge.bam.sh
+
+### Overlap clipping of merged bam files
+bamutil v.   
+sbatch overlapclipping.sh
+
+## In-del realignment
+GATK v. 3.7.0  
+sbatch realign_indels.sh  
+
+The resulting merged, overlap clipped, and realigned bam files are used as the inputs for ANGSD.
+
+## Downstream analysis using ANGSD
+
 
 
