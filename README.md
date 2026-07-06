@@ -48,4 +48,39 @@ Moving forward with filtered assembly for mapping of Illumina reads: hifi4523.as
 
 # Pre-processing and Mapping of Illumina reads
 
-Scripts are adapted from Nina Therkildsen's lab's data-processing repository (https://github.com/therkildsen-lab/genomic-data-analysis](https://github.com/therkildsen-lab/data-processing).
+Scripts are adapted from Nina Therkildsen's lab's data-processing repository (https://github.com/therkildsen-lab/data-processing).  
+
+Reads were run through pre-processing steps in two batches (Run1 and Run2) based on sequencing runs and merged after mapping.
+See Therkildsen repository above for a description of the sample tables and lists used in the scripts.
+
+## Pre-processing
+
+### Adapter trimming
+trimmomatic v. 0.39  
+Sample Lists/Tables: Sample_Table_Run1.tsv and Sample_List_Run1.tsv; Sample_Table_Run2.tsv and Sample_List_run2.tsv
+sbatch adapter_clipping.sh
+
+### Quality filtering
+fastp v. 0.23.4
+multiqc v. 1.14  
+
+Trimming to quality scores > 30  
+sbatch quality_filtering_q30.sh  
+
+One additional trimming step to remove index barcodes at the beginning of reads  
+sbatch trim2.sh
+
+## Mapping
+
+bowtie2 v. 2.5.1  
+samtools v. 1.17
+
+### Build Bowtie Reference Index
+
+sbatch build_bowtie_ref_index.sh  
+Outputs .bt2, .dict, and .fai files  
+
+### Mapping with Bowtie2
+
+
+
