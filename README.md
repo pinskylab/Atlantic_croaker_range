@@ -122,15 +122,37 @@ Generates Beagle file: bam_list_realigned_mindp132_maxdp4000_minind0.beagle.gz
 Outputs from PCAngsd are used in the Statistical Analysis in R section  
 
 sbatch run_pcangsd.sh  
-Ouputs covariance matrix: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.cov  
+Ouputs covariance matrix: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.cov 
+
+Analyze and plot data in R using individual_pca_functions.R script
 
 Selection Scan  
 run_pcangsd_selection.sh  
-Outputs npy file: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.selection.npy  
+Outputs npy file: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.selection.npy 
 
 Admixture with PCAngsd  
 sbatch run_pcangsd_admix.sh  
 Selects K=2 based on MAP analysis  
 Outputs: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0_e.admix.Q.npy, pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0_e.cov  
+
+Analyze and plot in R with admixture.R script
+
+### SFS generation, FST calculations, and Isolation-by-Distance
+
+Generate site frequency spectrum (SFS)  
+sbatch sfs_angsd.sh  
+Produces .saf file, run get_sfs.sh script to get sfs from saf file  
+sbatch get_sfs.sh 
+
+Plotting sfs in R using sfs.R script 
+
+Calculate pairwise Fst between populations  
+sbatch get_fst.sh script
+
+Use pairwise Fst results to test for isolation-by-distance using the ibd_analysis.R script
+
+
+
+
 
 
