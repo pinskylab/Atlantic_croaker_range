@@ -46,6 +46,13 @@ Filtered assembly: N50 19,238,659; L50 17, GC% 42.54; # of contigs 2860; total l
 
 Moving forward with filtered assembly for mapping of Illumina reads: hifi4523.asm.bp.p_ctg.filtered.fa
 
+### Annotating genome assembly
+
+Using Liftoff v. 1.6.3 and the Collicthys lucidus assembly GCA_004119915.2 (Gan et al. 2021), the closet relative with an annotated
+genome, as a reference. https://github.com/agshumate/Liftoff
+
+Produces annotation hifi.gff
+
 # Pre-processing and Mapping of Illumina reads
 
 Scripts are adapted from Nina Therkildsen's lab's data-processing repository (https://github.com/therkildsen-lab/data-processing).  
