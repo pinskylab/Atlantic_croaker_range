@@ -165,11 +165,15 @@ Include -indf_save command in PCAngsd code to save this frequency matrix as an o
 sbatch run_pcangsd_freqmatrix.sh  
 Using *.indf.npy output for subsequent analysis in R  
 
-Loading in environmental data for the GEA analysis in env_data.R script
+Loading in environmental data from Copernicus Marine Services for the GEA analysis in env_data.R script  
+Used latitude, depth, bottom temperature, bottom salinity, and bottom dissolved oxygen.
 
 Running GEA analyses (RDA and LFMM) in rda_analysis.R and lfmm_analysis.R scripts  
 rda_analysis.R script uses rdadapt.R script to identify candidate SNPs
 
+Annotating candidate SNPS identified by RDA with SnpEff v.4_3s, using the hifi.gff file produced in the Genome Annotation section.  
+sbatch run_snpeff.sh
 
+Outputs 2320snps.ann.vcf and snpEff_genes.txt which give the SNP annotations.
 
 
