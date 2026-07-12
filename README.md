@@ -1,7 +1,7 @@
 # Atlantic_croaker_range
 ## Repository for bioinformatics and genomic analysis of Atlantic croaker (Micropogonias undulatus) collected off the Eastern United States. 
 
-This repository provides the code for the third chapter of the doctoral dissertation Conservation Genomics of Marine Fish Populations: https://doi.org/doi:10.7282/t3-wgyk-5s02. This research was supported by a NOAA Margaret A. Davidson fellowship. 
+This repository provides the code for the third chapter of the doctoral dissertation Conservation Genomics of Marine Fish Populations: https://doi.org/doi:10.7282/t3-wgyk-5s02. This research was supported by a NOAA Margaret A. Davidson fellowship (Grant # NA22NOS4200056). Samples were obtained by the NEAMAP and SEAMAP-SA surveys under VIMS IACUC-2020-02-24-14108-jxgart and Rutgers IACUC Protocol PROTO999900001.
 
 As genomic data is too large to be stored on GitHub, sequence data were uploaded to the NCBI SRA and metadata to GEOME-DB.
 
@@ -13,6 +13,8 @@ Illumina reads (low-coverage whole genome sequencing) for 400 individuals: BioPr
 
 Genome assembly, pre-processing, mapping, and downstream analysis were run using Amarel, Rutgers University's high performance computing system.
 Statistical analysis was run using R v.4.4.1 on a MacBook Pro (Apple M3 Pro Chip with 36 GB memory).
+
+Contact: kyrasfitz at gmail dot com
 
 # De Novo Genome Assembly
 ## Assembly using Hifiasm
