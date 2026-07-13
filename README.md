@@ -137,7 +137,8 @@ Analyze and plot data in R using individual_pca_functions.R script
 
 Selection Scan  
 run_pcangsd_selection.sh  
-Outputs npy file: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.selection.npy 
+Outputs npy file: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.selection.npy  
+Analyze in R with selection_scans.R script
 
 Admixture with PCAngsd  
 sbatch run_pcangsd_admix.sh  
