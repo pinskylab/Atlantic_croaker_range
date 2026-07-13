@@ -12,7 +12,7 @@ PacBio Hifi Sequencing data for one individual (used to generate a de novo assem
 Illumina reads (low-coverage whole genome sequencing) for 400 individuals: BioProject PRJNA1457870 https://www.ncbi.nlm.nih.gov/bioproject/1457870.
 
 Genome assembly, pre-processing, mapping, and downstream analysis were run using Amarel, Rutgers University's high performance computing system.
-Statistical analysis was run using R v.4.4.1 on a MacBook Pro (Apple M3 Pro Chip with 36 GB memory).
+Statistical analysis was run using R v.4.3.2 on a MacBook Pro (Apple M3 Pro Chip with 36 GB memory).
 
 Contact: kyrasfitz at gmail dot com
 
@@ -99,11 +99,11 @@ sbatch samtools_mapping.sh
 
 ### Merging bam files
 bam_list_merged.tsv  
-sbatch merge.bam.sh
+sbatch merge_bam.sh
 
 ### Overlap clipping of merged bam files
 bamutil v.   
-sbatch overlapclipping.sh
+sbatch clipoverlap.sh
 
 ## In-del realignment
 GATK v. 3.7.0  
