@@ -171,11 +171,12 @@ sbatch run_pcangsd_freqmatrix.sh
 Using *.indf.npy output for subsequent analysis in R  
 
 Loading in environmental data from Copernicus Marine Services for the GEA analysis in env_data.R script  
-Environmental variables are latitude, depth, bottom temperature, bottom salinity, and bottom dissolved oxygen.  
+Environmental variables are latitude, depth, bottom temperature, bottom salinity, and bottom dissolved oxygen  
 Uses mercatorbiomer4v2r1_global_mean_bio_202210.nc and glo12_rg_1m-m_202210-202210_2D_hcst.nc files as inputs  
 
 Running GEA analyses (RDA and LFMM) in rda_analysis.R and lfmm_analysis.R scripts  
-rda_analysis.R script uses rdadapt.R script to identify candidate SNPs
+rda_analysis.R script uses rdadapt.R script to identify candidate SNPs  
+Uses pcangsd_minmaf0.05_bam_list_realigned_mindp132_maxdp4000_minind0_minmaf0.indf.npy, bam_list_realigned_mindp132_maxdp4000_minind0_minmaf0.05.mafs.txt, and bam_list_realigned_mindp132_maxdp4000_minind0.50_minq20.pos.gz files as inputs  
 
 Annotating candidate SNPS identified by RDA with SnpEff v.4_3s, using the hifi.gff file produced in the Genome Annotation section.  
 sbatch run_snpeff.sh
