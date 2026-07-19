@@ -59,14 +59,14 @@ Produces annotation hifi.gff
 
 Scripts are adapted from Nina Therkildsen's lab's data-processing repository (https://github.com/therkildsen-lab/data-processing).  
 
-Reads were run through pre-processing steps in two batches (Run1 and Run2) based on sequencing runs and merged after mapping.
+Reads were merged after mapping.
 See Therkildsen repository above for a description of the sample tables and lists used in the scripts.
 
 ## Pre-processing
 
 ### Adapter trimming
 trimmomatic v. 0.39  
-Sample Lists/Tables: Sample_Table_Run1.tsv and Sample_List_Run1.tsv; Sample_Table_Run2.tsv and Sample_List_run2.tsv
+Sample Lists/Tables: Sample_List_Combined.tsv and Sample_Table_Combined.tsv
 sbatch adapter_clipping.sh
 
 ### Quality filtering
@@ -90,8 +90,7 @@ sbatch build_bowtie_ref_index.sh
 Outputs .bt2, .dict, and .fai files  
 
 ### Mapping with Bowtie2
-
-Sample_List_Combined.tsv and Sample_Table_Combined.tsv  
+ 
 sbatch low_coverage_mapping.sh  
 
 Running samtools conversion to bam file  
@@ -115,6 +114,8 @@ The resulting merged, overlap clipped, and realigned bam files are used as the i
 
 ANGSD v. 0.940  
 PCAngsd v. 0.98.2  
+
+Scripts are adapted from Nina Therkildsen's lab's low-coverage data analysis repository (https://github.com/therkildsen-lab/genomic-data-analysis).
 
 ### SNP Calling with ANGSD
 
