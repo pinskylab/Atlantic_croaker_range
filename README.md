@@ -133,7 +133,8 @@ Outputs from PCAngsd are used in the Statistical Analysis in R section
 sbatch run_pcangsd.sh  
 Ouputs covariance matrix: pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.cov 
 
-Analyze and plot data in R using individual_pca_functions.R script
+Analyze and plot data in R using individual_pca_functions.R script  
+Uses pcangsd_bam_list_realigned_mindp132_maxdp4000_minind0.cov and pop_labels.csv as input files  
 
 Selection Scan  
 run_pcangsd_selection.sh  
