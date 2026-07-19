@@ -102,7 +102,7 @@ bam_list_merged.tsv
 sbatch merge_bam.sh
 
 ### Overlap clipping of merged bam files
-bamutil v.   
+bamutil v. 1.0.15  
 sbatch clipoverlap.sh
 
 ## In-del realignment
