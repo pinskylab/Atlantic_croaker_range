@@ -172,7 +172,7 @@ Using *.indf.npy output for subsequent analysis in R
 
 Loading in environmental data from Copernicus Marine Services for the GEA analysis in env_data.R script  
 Environmental variables are latitude, depth, bottom temperature, bottom salinity, and bottom dissolved oxygen  
-Uses mercatorbiomer4v2r1_global_mean_bio_202210.nc and glo12_rg_1m-m_202210-202210_2D_hcst.nc files as inputs  
+Uses mercatorbiomer4v2r1_global_mean_bio_202210.nc, glo12_rg_1m-m_202210-202210_2D_hcst.nc, and Env_Data_Noaa_Oct.csv files as inputs  
 
 Running GEA analyses (RDA and LFMM) in rda_analysis.R and lfmm_analysis.R scripts  
 rda_analysis.R script uses rdadapt.R script to identify candidate SNPs  
