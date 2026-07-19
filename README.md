@@ -155,12 +155,13 @@ sbatch sfs_angsd.sh
 Produces .saf file, run get_sfs.sh script to get sfs from saf file  
 sbatch get_sfs.sh 
 
-Plotting sfs in R using sfs.R script 
+Plotting sfs in R using sfs.R script (uses .sfs files as inputs)  
 
 Calculate pairwise Fst between populations  
 sbatch get_fst.sh script
 
-Use pairwise Fst results to test for isolation-by-distance using the ibd_analysis.R script
+Use pairwise Fst results to test for isolation-by-distance using the ibd_analysis.R script  
+Uses Lat_Lon_9pop.csv and Pairwise_Fst_9pop.csv files as inputs  
 
 ### Genotype-environnment association (GEA) analysis
 
