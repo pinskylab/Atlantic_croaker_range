@@ -50,8 +50,9 @@ Moving forward with filtered assembly for mapping of Illumina reads: hifi4523.as
 
 ### Annotating genome assembly
 
-Using Liftoff v. 1.6.3 and the Collicthys lucidus assembly GCA_004119915.2 (Gan et al. 2021), the closet relative with an annotated
-genome, as a reference. https://github.com/agshumate/Liftoff
+Using Liftoff v. 1.6.3 and the Collicthys lucidus assembly GCA_004119915.2 (Gan et al. 2021; https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_004119915.2/), the closet relative with an annotated
+genome, as a reference. 
+crun liftoff -g GCA_004119915.2_ASM411991v2_genomic.gff.gz hifi4523.asm.bp.p_ctg.filtered.fa GCA_004119915.2_ASM411991v2_genomic.fa  
 
 Produces annotation hifi.gff
 
