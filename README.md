@@ -11,7 +11,11 @@ PacBio Hifi Sequencing data for one individual (used to generate a de novo assem
 
 Illumina reads (low-coverage whole genome sequencing) for 400 individuals: BioProject PRJNA1457870 https://www.ncbi.nlm.nih.gov/bioproject/1457870.  
 
-Genome assembly and annotation are available at: https://doi.org/10.6084/m9.figshare.33030167.
+Genome assembly and annotation are available at: https://doi.org/10.6084/m9.figshare.33030167.  
+
+Scripts for running processing and analyses can be found in the Scripts subdirectory (https://github.com/pinskylab/Atlantic_croaker_range/tree/main/Scripts)  
+
+Input and output files can be found in the Files subdirectory (https://github.com/pinskylab/Atlantic_croaker_range/tree/main/Files)  
 
 Genome assembly, pre-processing, mapping, and downstream analysis were run using Amarel, Rutgers University's high performance computing system.
 Statistical analysis was run using R v.4.3.2 on a MacBook Pro (Apple M3 Pro Chip with 36 GB memory).
@@ -113,7 +117,7 @@ sbatch realign_indels.sh
 
 The resulting merged, overlap clipped, and realigned bam files are used as the inputs for ANGSD.
 
-## Downstream analysis using ANGSD
+# Downstream analysis using ANGSD and statistical analysis in R
 
 ANGSD v. 0.940  
 PCAngsd v. 0.98.2  
@@ -128,7 +132,7 @@ Generates list of SNPs to be used for subsequent analyses.
 ### Genotype-likelihood estimation 
 
 sbatch get_beagle.sh  
-Generates Beagle file: bam_list_realigned_mindp132_maxdp4000_minind0.beagle.gz
+Generates Beagle file
 
 ### PCAngsd: PCA, Admixture, Selection Scans
 
