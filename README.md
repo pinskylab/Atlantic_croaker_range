@@ -9,7 +9,9 @@ Metadata is available at: https://n2t.net/ark:/21547/GjB2.
 
 PacBio Hifi Sequencing data for one individual (used to generate a de novo assembly): BioProject PRJNA1460334 https://www.ncbi.nlm.nih.gov/sra/PRJNA1460334.
 
-Illumina reads (low-coverage whole genome sequencing) for 400 individuals: BioProject PRJNA1457870 https://www.ncbi.nlm.nih.gov/bioproject/1457870.
+Illumina reads (low-coverage whole genome sequencing) for 400 individuals: BioProject PRJNA1457870 https://www.ncbi.nlm.nih.gov/bioproject/1457870.  
+
+Genome assembly and annotation are available at: 10.6084/m9.figshare.33030167.
 
 Genome assembly, pre-processing, mapping, and downstream analysis were run using Amarel, Rutgers University's high performance computing system.
 Statistical analysis was run using R v.4.3.2 on a MacBook Pro (Apple M3 Pro Chip with 36 GB memory).
