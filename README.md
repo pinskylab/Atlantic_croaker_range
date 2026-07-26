@@ -3,7 +3,7 @@
 
 This repository provides the code for the third chapter of the doctoral dissertation Conservation Genomics of Marine Fish Populations: https://doi.org/doi:10.7282/t3-wgyk-5s02. This research was supported by a NOAA Margaret A. Davidson fellowship (Grant # NA22NOS4200056). Samples were obtained by the NEAMAP and SEAMAP-SA surveys under VIMS IACUC-2020-02-24-14108-jxgart and Rutgers IACUC Protocol PROTO999900001.
 
-As genomic data is too large to be stored on GitHub, sequence data were uploaded to the NCBI SRA and metadata to GEOME-DB.
+As genomic data is too large to be stored on GitHub, sequence data were uploaded to the NCBI SRA and metadata to GEOME-DB. Disclaimer: These data and related items of information have not been formally disseminated by NOAA, and do not represent any agency determination, view, or policy.
 
 Metadata is available at: https://n2t.net/ark:/21547/GjB2.
 
