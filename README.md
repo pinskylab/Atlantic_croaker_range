@@ -115,7 +115,8 @@ sbatch clipoverlap.sh
 GATK v. 3.7.0  
 sbatch realign_indels.sh  
 
-The resulting merged, overlap clipped, and realigned bam files are used as the inputs for ANGSD.
+The resulting merged, overlap clipped, and realigned bam files are used as the inputs for ANGSD.  
+Use bam_list_realigned.tsv for bam list inputs in ANGSD.
 
 # Downstream analysis using ANGSD and statistical analysis in R
 
