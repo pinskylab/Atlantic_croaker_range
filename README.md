@@ -38,7 +38,7 @@ BUSCO v. 5.4.6 using lineage actinopterygii on primary contig Hifiasm assembly (
 sbatch busco_code.sh  
 Complete:98.9%[Single:97.4%,Duplicate:1.5%],Fragemented:0.2%,Missing:0.9%,n:3640
 
-BlobToolKit: identifying and filtering out contamination
+BlobToolKit v. 4.1.5: identifying and filtering out contamination
 
 Running Blastn as first step to identifying contamination (following https://blobtoolkit.genomehubs.org/install/#databases):  
 Blast v. 2.6.0  
