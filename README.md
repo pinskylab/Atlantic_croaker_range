@@ -44,7 +44,7 @@ Running Blastn as first step to identifying contamination (following https://blo
 Blast v. 2.6.0  
 sbatch blastn_code.sh  
 
-sbatch blobtools_create.sh 
+sbatch blobtools_create.sh  
 Plots show reads with GC content < 40% are not vertebrates. Will remove these reads. 
 
 Filtering out contamination with Blobtools:  
