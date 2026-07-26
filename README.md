@@ -111,7 +111,7 @@ sbatch merge_bam.sh
 bamutil v. 1.0.15  
 sbatch clipoverlap.sh
 
-## In-del realignment
+### In-del realignment
 GATK v. 3.7.0  
 sbatch realign_indels.sh  
 
