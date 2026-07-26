@@ -11,7 +11,7 @@ PacBio Hifi Sequencing data for one individual (used to generate a de novo assem
 
 Illumina reads (low-coverage whole genome sequencing) for 400 individuals: BioProject PRJNA1457870 https://www.ncbi.nlm.nih.gov/bioproject/1457870.  
 
-Genome assembly and annotation are available at: https://doi.org/10.6084/m9.figshare.33030167.  
+Genome assembly and annotation used in the dissertation are available at: https://doi.org/10.6084/m9.figshare.33030167.  
 
 Scripts for running processing and analyses can be found in the Scripts subdirectory (https://github.com/pinskylab/Atlantic_croaker_range/tree/main/Scripts)  
 
