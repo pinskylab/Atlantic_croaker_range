@@ -73,7 +73,7 @@ See Therkildsen repository above for a description of the sample tables and list
 
 ### Adapter trimming
 trimmomatic v. 0.39  
-Sample Lists/Tables: Sample_List_Combined.tsv and Sample_Table_Combined.tsv
+Sample Lists/Tables: Sample_List_Combined.tsv and Sample_Table_Combined.tsv  
 sbatch adapter_clipping.sh
 
 ### Quality filtering
